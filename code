@@ -1,0 +1,27 @@
+function isLucky(n) {
+    //variables to used in the solving of the task
+    //convertion of the integer into string
+    var stringVersion = n.toString();
+    //obtaining the length of the string value of n
+    //so as to know where the half split shall begin at
+    var stringLength = stringVersion.length;
+    //converting the string into array so as to split int o half during calculation process
+    var array = stringVersion.split('');
+    var count1 = 0;
+    var count2 = 0;
+    
+    //loop for calculating the addition of the two halfs of the array
+    for(var i = 0;i<(stringLength/2);i++){
+        count1 += parseInt(array[i]);
+        count2 += parseInt(array[((stringLength/2))+i])
+    }
+    
+    //getting an answer of the task 
+    if(count1 == count2){
+        return true;
+    }else{
+        return false;
+    }
+    
+
+}
